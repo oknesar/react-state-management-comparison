@@ -31,7 +31,7 @@ function Listener({ store }: { store: Store }) {
 function LayoutUpdater({ store }: { store: Store }) {
   useLayoutEffect(() => {
     store.update({ count: 1 });
-  }, []);
+  }, [store]);
 
   return (
     <article className="consumer consumer--current">

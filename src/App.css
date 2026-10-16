@@ -126,6 +126,143 @@ pre code {
   white-space: pre;
 }
 
+.seat-reservation {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: 24px;
+}
+
+.seat-picker,
+.reservation-summary {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.cinema-screen {
+  margin: 0 auto 32px;
+  padding: 8px;
+  border-radius: 50% 50% 4px 4px;
+  color: var(--text-h);
+  background: var(--code-bg);
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.seat {
+  aspect-ratio: 1;
+  border: 1px solid var(--border);
+  border-radius: 6px 6px 3px 3px;
+  color: var(--text-h);
+  background: var(--bg);
+  cursor: pointer;
+}
+
+.seat:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.seat:focus-visible,
+.reserve-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.seat--selected {
+  border-color: var(--accent);
+  color: #fff;
+  background: var(--accent);
+}
+
+.seat--occupied {
+  color: var(--text);
+  background: var(--code-bg);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.seat-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+  font-size: 12px;
+}
+
+.seat-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.seat-key {
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+
+.seat-key--selected {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.seat-key--occupied {
+  background: var(--code-bg);
+  opacity: 0.6;
+}
+
+.reservation-summary h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.reservation-summary dl {
+  margin: 24px 0;
+}
+
+.reservation-summary dl div {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.reservation-summary dd {
+  margin: 0;
+  color: var(--text-h);
+  font-weight: 700;
+}
+
+.reserve-button {
+  width: 100%;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  background: var(--accent);
+  font: inherit;
+  cursor: pointer;
+}
+
+.reserve-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.reservation-message {
+  min-height: 48px;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
 @media (max-width: 720px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -141,6 +278,10 @@ pre code {
   }
 
   .consumers {
+    grid-template-columns: 1fr;
+  }
+
+  .seat-reservation {
     grid-template-columns: 1fr;
   }
 }
