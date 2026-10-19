@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { CodeBlock } from "../../components/CodeBlock";
 import { Observable } from "../../core/Observable/Observable";
 import { useObservableState } from "../../hooks/useObservableState";
 
@@ -79,9 +80,7 @@ export function ObservableRacePage() {
 
         <article className="variation">
           <h3>Earlier sibling updates in a passive effect</h3>
-          <pre>
-            <code>{passiveEffectExample}</code>
-          </pre>
+          <CodeBlock code={passiveEffectExample} />
         </article>
       </section>
     </section>

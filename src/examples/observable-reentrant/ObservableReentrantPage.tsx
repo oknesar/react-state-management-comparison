@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { CodeBlock } from "../../components/CodeBlock";
 import { Observable } from "../../core/Observable/Observable";
 import { useObservableState } from "../../hooks/useObservableState";
 
@@ -60,9 +61,7 @@ export function ObservableReentrantPage() {
         </p>
         <article className="variation">
           <h3>Subscriber updates its own store</h3>
-          <pre>
-            <code>{example}</code>
-          </pre>
+          <CodeBlock code={example} />
         </article>
       </section>
     </section>

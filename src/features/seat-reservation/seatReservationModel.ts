@@ -8,6 +8,7 @@ export type SeatViewModel = {
 
 export type ReservationStatus = "idle" | "reserving" | "success";
 
+/** The contract between any store implementation and the stateless seat UI. */
 export type SeatReservationViewState = {
   seats: SeatViewModel[];
   selectedCount: number;

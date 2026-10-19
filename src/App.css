@@ -19,6 +19,20 @@
   gap: 4px;
 }
 
+.sidebar-group {
+  margin-top: 24px;
+}
+
+.sidebar-group h3 {
+  padding: 0 12px;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .sidebar a {
   padding: 10px 12px;
   border-radius: 6px;
@@ -103,6 +117,27 @@ main {
   max-width: 680px;
 }
 
+.approach-parts {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0 0;
+}
+
+.approach-parts div {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 12px;
+}
+
+.approach-parts dt {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.approach-parts dd {
+  margin: 0;
+}
+
 .variation {
   margin-top: 28px;
 }
@@ -124,6 +159,31 @@ pre code {
   padding: 0;
   background: transparent;
   white-space: pre;
+}
+
+.token--comment {
+  color: var(--code-comment);
+  font-style: italic;
+}
+
+.token--string {
+  color: var(--code-string);
+}
+
+.token--keyword {
+  color: var(--code-keyword);
+}
+
+.token--type {
+  color: var(--code-type);
+}
+
+.token--number {
+  color: var(--code-number);
+}
+
+.token--decorator {
+  color: var(--code-decorator);
 }
 
 .seat-reservation {

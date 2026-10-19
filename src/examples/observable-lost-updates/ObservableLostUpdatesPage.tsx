@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { CodeBlock } from "../../components/CodeBlock";
 import { Observable } from "../../core/Observable/Observable";
 import { useObservableState } from "../../hooks/useObservableState";
 
@@ -67,9 +68,7 @@ export function ObservableLostUpdatesPage() {
         </p>
         <article className="variation">
           <h3>Two stale read-modify-write operations</h3>
-          <pre>
-            <code>{example}</code>
-          </pre>
+          <CodeBlock code={example} />
         </article>
       </section>
     </section>

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { CodeBlock } from "../../components/CodeBlock";
 import { Observable } from "../../core/Observable/Observable";
 import { useObservableState } from "../../hooks/useObservableState";
 
@@ -82,9 +83,7 @@ export function ObservableNoSelectorsPage() {
         </p>
         <article className="variation">
           <h3>An unrelated field still causes a render</h3>
-          <pre>
-            <code>{example}</code>
-          </pre>
+          <CodeBlock code={example} />
         </article>
       </section>
     </section>

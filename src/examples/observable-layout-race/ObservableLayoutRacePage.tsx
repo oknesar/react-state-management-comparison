@@ -1,4 +1,5 @@
 import { useLayoutEffect, useState } from "react";
+import { CodeBlock } from "../../components/CodeBlock";
 import { Observable } from "../../core/Observable/Observable";
 import { useObservableState } from "../../hooks/useObservableState";
 
@@ -75,9 +76,7 @@ export function ObservableLayoutRacePage() {
 
         <article className="variation">
           <h3>Listener first, updater uses a layout effect</h3>
-          <pre>
-            <code>{example}</code>
-          </pre>
+          <CodeBlock code={example} />
         </article>
       </section>
     </section>
