@@ -31,5 +31,6 @@ const standardDecorators = (): Plugin => ({
 
 // https://vite.dev/config/
 export default defineConfig({
+  build: { outDir: "docs" },
   plugins: [react(), standardDecorators()],
 });
